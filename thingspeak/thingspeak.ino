@@ -1,6 +1,5 @@
 /******************************************************************************
-  Project  : NECTEC IoT Camp 2016
-  Compiler : Arduino 1.6.7
+  Compiler : Arduino IDE
   Board    : ESPresso Lite V2
   Device   : DHT11
   Dashboard : -
