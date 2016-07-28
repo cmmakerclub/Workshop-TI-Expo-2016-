@@ -1,5 +1,6 @@
 /******************************************************************************
-  Compiler : Arduino IDE
+  Project  : NECTEC IoT Camp 2016
+  Compiler : Arduino 1.6.7
   Board    : ESPresso Lite V2
   Device   : DHT11
   Dashboard : -
@@ -44,7 +45,7 @@ void loop() {
   if (WiFi.status() == WL_CONNECTED) {
     if (t >= 30) {  //  if temperature > 30 c then sent message to your smartphone
       Serial.println("Sent message....");
-      String msg = "https://api.thingspeak.com/update?api_key="+ device_key +"&field1=0&field2=30";
+      String msg = "http://www.espert.io/MySmartphone/send?key="+ device_key +"&message=Test";
       doHttpGet(msg);
       delay(5000);  //  delay for gethttp
     }
