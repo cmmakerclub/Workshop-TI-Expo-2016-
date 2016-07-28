@@ -18,8 +18,8 @@ CMMC_Blink blinker;
 const char* ssid     = "ESPERT-3020";  // Change your ssid wifi 
 const char* password = "espertap";  // Change your password wifi
 
-String device_key = "66421";   //  Change your 
-String message = "Hello%20from%20ESPressoLite-V2"; //  Change your message
+String device_key = "568382855525171";   //  Change your 
+String message = "Test"; //  Change your message
 
 #define DHTPIN 12
 #define DHTTYPE DHT11
@@ -43,12 +43,12 @@ void loop() {
   float h = dht.readHumidity();
 
   if (WiFi.status() == WL_CONNECTED) {
-    if (t >= 30) {  //  if temperature > 30 c then sent message to your smartphone
+   
       Serial.println("Sent message....");
       String msg = "http://www.espert.io/MySmartphone/send?key="+ device_key +"&message=Test";
       doHttpGet(msg);
-      delay(5000);  //  delay for gethttp
-    }
+      delay(50000);  //  delay for gethttp
+  
     Serial.println("Connect...");
   } else  {
     Serial.println("connection lost, reconnect...");
